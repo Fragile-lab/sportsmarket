@@ -127,6 +127,13 @@ body {
 
 .card {
   margin: 0 auto;
+  border: 2px solid #000;
+  border-radius: 5px;
+  padding: 20px;
+}
+.card__price-money {
+  display: flex;
+  justify-content: space-between;
 }
 .card__price-old {
   font-size: 32px;
@@ -149,4 +156,26 @@ body {
   font-size: 32px;
   color: #5bb3ef;
   font-weight: 600;
+}
+.card__slider-button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #59b0ec;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 600;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding-bottom: 5px;
+  transition: all 0.15s ease-in-out;
+}
+.card__slider-button:hover {
+  background-color: #78bbe7;
+}
+.card__slider-button.button-left:hover {
+  padding-right: 5px;
+}
+.card__slider-button.button-right:hover {
+  padding-left: 5px;
 }
