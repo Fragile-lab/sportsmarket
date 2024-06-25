@@ -1,7 +1,7 @@
 function changeClass() {
-    const buttonno = document.querySelector('.button-no');
+    const card = document.querySelector('#image-1');
     let count = 1;
-    buttonno.addEventListener("mouseenter", () => {
+    buttonno.addEventListener("onclick", () => {
       if (count < 4 && count > 0) {
         buttonno.classList.remove(`move${count - 1}`);
         buttonno.classList.add(`move${count}`);

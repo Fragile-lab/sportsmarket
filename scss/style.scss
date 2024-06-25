@@ -10,6 +10,29 @@
 }
 .card {
     margin: 0 auto;
+    &__price-old {
+        font-size: 32px;
+        font-weight: 600;
+        position: relative;
+        color: #b7b6b8;
+        display: inline-block;
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 50%;
+            width: 100%;
+            height: 3px;
+            border-radius: 2px;
+            background-color: #b7b6b8;
+
+        }
+    }
+    &__price-new {
+        font-size: 32px;
+        color: #5bb3ef;
+        font-weight: 600;
+    }
 }
 
 
