@@ -1,0 +1,16 @@
+@import "_nullstyle";
+
+//style.scss
+
+@import "_global";
+
+.frame1 {
+    display: flex;
+    justify-content: space-between;
+}
+.card {
+    margin: 0 auto;
+}
+
+
+@import "_adaptive.scss";
