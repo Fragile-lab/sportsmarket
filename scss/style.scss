@@ -3,13 +3,15 @@
 //style.scss
 
 @import "_global";
+
 .wrapper {
     width: 100%;
     background-image: url("../img/background.jpg");
     background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: center;
+    background-size: 100% auto;
+    background-position: top center;
     position: relative;
+
     &::before {
         content: '';
         position: absolute;
@@ -20,6 +22,7 @@
         background-color: #000000e6;
     }
 }
+
 .frame1 {
     width: 100%;
     position: absolute;
@@ -28,28 +31,40 @@
     display: flex;
     justify-content: center;
 }
+
 .card {
     margin: 0 30px;
     max-width: 500px;
     max-height: 660px;
+
     &__title {
         font-size: 26px;
         line-height: 36px;
         color: #fff;
         margin: 120px 0 31px 0;
     }
+
     &__container {
         background-color: #fafbfc;
         border-radius: 2px;
         padding: 40px;
     }
+
     &__name {
         font-size: 32px;
         line-height: 36px;
         font-weight: 600;
         text-align: center;
     }
+
     //SLIDER
+    &__slider {
+        position: relative;
+        width: 420px;
+        height: 260px;
+        background-color: #fff;
+        margin-top: 40px;
+    }
     &__slider-button {
         width: 56px;
         height: 56px;
@@ -59,47 +74,96 @@
         justify-content: center;
         align-items: center;
         transition: all 0.15s ease-in-out;
-        & .slider-prev-arrow {
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+        &.slider-button-prev {
+            left: -20px;
+        }
+        &.slider-button-next {
+            right: -20px;
+        }
+
+
+        & .slider-arrow {
             pointer-events: none;
             display: block;
             position: relative;
-            left: -12px;
-            transition: all 0.15s ease-in-out;
-            &::before,&::after {
+            transition: all 0.15s ease-in-out, left 0.05s ease-in-out;
+
+            &::before,
+            &::after {
                 content: '';
                 position: absolute;
-                left: 0;
                 width: 20px;
                 height: 4px;
                 border-radius: 5px;
                 background-color: #fff;
             }
+        }
+
+        
+
+        & .slider-prev-arrow {
+            left: -12px;
+
+            &::before,
+            &::after {
+                left: 0;
+            }
+
             &::before {
                 top: -6px;
                 transform: rotate(-45deg);
             }
+
             &::after {
                 top: 6px;
                 transform: rotate(45deg);
             }
         }
-        &:hover,&:focus {
-            background-color: #2395e6;
+        & .slider-next-arrow {
+            left: -9px;
+            &::before,
+            &::after {
+                left: 0;
+            }
+            &::before {
+                top: -6px;
+                transform: rotate(45deg);
+            }
+            &::after {
+                top: 6px;
+                transform: rotate(-45deg);
+            }
+        }
+
+        &:hover {
+            background-color: #399de6;
+            box-shadow: inset 0 0 5px #353535;
+
+            & .slider-prev-arrow,& .slider-next-arrow {
+                scale: 0.95;
+
+            }
+        }
+
+        &:active {
+            background-color: #188ee2;
+
             & .slider-prev-arrow {
                 left: -16px;
             }
-        }
-        &:active {
-            background-color: #138be0;
-            box-shadow: inset 0 0 5px #000;
-            & .slider-prev-arrow {
-                scale: 0.95;
+            & .slider-next-arrow {
+                left: -5px;
             }
         }
     }
+
     &__info {
         margin-top: 30px;
     }
+
     &__list {
         & li {
             font-size: 18px;
@@ -107,6 +171,7 @@
             font-weight: 500;
             position: relative;
             padding-left: 21px;
+
             &::before {
                 content: '';
                 display: inline-block;
@@ -121,21 +186,25 @@
             }
         }
     }
+
     &__price {
         margin-top: 30px;
         background-color: #fff;
         border-radius: 2px;
         padding: 25px;
+
         &-title {
             font-size: 18px;
             font-weight: 800;
         }
+
         &-old {
             display: inline-block;
             color: #b1b0b3;
             font-size: 22px;
             line-height: 36px;
             position: relative;
+
             &::after {
                 content: '';
                 display: block;
@@ -148,6 +217,7 @@
                 background-color: #b1b0b3;
             }
         }
+
         &-new {
             margin-left: 15px;
             display: inline-block;
