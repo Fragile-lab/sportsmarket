@@ -155,8 +155,9 @@ body {
 .card__title {
   font-size: 26px;
   line-height: 36px;
+  font-weight: 500;
   color: #fff;
-  margin: 120px 0 31px 0;
+  margin: 110px 0 31px 0;
 }
 .card__container {
   background-color: #fafbfc;
@@ -175,6 +176,22 @@ body {
   height: 260px;
   background-color: #fff;
   margin-top: 40px;
+}
+.card__slider .slider__container {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+.card__slider .slider__container .slider__image {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 0);
+  transition: all 0.15s ease-in;
+}
+.card__slider .slider__container .slider__image.image1-2, .card__slider .slider__container .slider__image.image2-2 {
+  display: none;
+  opacity: 0;
 }
 .card__slider-button {
   width: 56px;
@@ -279,7 +296,7 @@ body {
   margin-top: 30px;
   background-color: #fff;
   border-radius: 2px;
-  padding: 25px;
+  padding: 8px 25px 25px 22px;
 }
 .card__price-title {
   font-size: 18px;
@@ -287,7 +304,7 @@ body {
 }
 .card__price-old {
   display: inline-block;
-  color: #b1b0b3;
+  color: #79797a;
   font-size: 22px;
   line-height: 36px;
   position: relative;
@@ -309,5 +326,5 @@ body {
   color: #53afee;
   font-size: 34px;
   line-height: 36px;
-  font-weight: 800;
+  font-weight: 700;
 }
