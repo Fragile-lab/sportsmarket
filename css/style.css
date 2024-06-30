@@ -354,16 +354,20 @@ body {
     background-size: cover;
   }
   .card {
-    max-width: 320px;
+    max-width: 100%;
+    margin: 0 25px;
+    max-height: 720px;
   }
   .card__title {
     font-size: 22px;
+    margin: 15px 0;
   }
   .card__title br {
     display: none;
   }
   .card__container {
     padding: 20px;
+    margin-bottom: 15px;
   }
   .card__name {
     font-size: 28px;
@@ -372,14 +376,12 @@ body {
     width: 100%;
     margin-top: 20px;
   }
-  .card__slider1 {
-    margin-top: 55px;
-  }
   .card__info {
     margin-top: 15px;
   }
   .card__price {
     width: 100%;
+    height: 120px;
     padding: 10px;
     margin: 15px auto 0 auto;
   }
@@ -396,14 +398,12 @@ body {
     scale: 0.6;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 819px) {
   .frame1 {
     display: block;
-    max-width: 320px;
     margin: 0 auto;
-    padding: 0 5px;
   }
-  .card {
-    margin: 20px auto;
+  .card__price-new {
+    display: block;
   }
 }
