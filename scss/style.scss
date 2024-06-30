@@ -8,7 +8,7 @@
     width: 100%;
     background-image: url("../img/background.jpg");
     background-repeat: no-repeat;
-    background-size: 100% auto;
+    background-size: cover;
     background-position: bottom center;
     position: relative;
 
@@ -22,12 +22,14 @@
         background-color: hsla(0, 0%, 11%, 0.959);
     }
 }
-
-.frame1 {
-    width: 100%;
+.main {
     position: absolute;
     left: 0;
     top: 0;
+    width: 100%;
+}
+.frame1 {
+    width: 100%;
     display: flex;
     justify-content: center;
 }
@@ -76,8 +78,10 @@
                 position: absolute;
                 left: 50%;
                 bottom: 0;
-                transform: translate(-50%, -15px);
-                transition: all 0.15s ease-in;
+                transform: translate(-50%, 0);
+                transition: all 0.15s ease-in, opacity 0.3s ease-in-out;
+                height: 100%;
+                padding: 20px 0 0 0;
             }
         }
     }
@@ -272,18 +276,6 @@
         }
     }
 }
-// простая анимация через opacity при slider
-.slider__image {
-    &.image1-1,
-    &.image2-1 {
-        display: block;
-        opacity: 1;
-    }
-    &.image1-2,
-    &.image2-2 {
-        display: none;
-        opacity: 0;
-    }
-}
+
 
 @import "_adaptive.scss";

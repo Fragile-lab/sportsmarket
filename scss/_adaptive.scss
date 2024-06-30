@@ -1,0 +1,72 @@
+@media (max-width: 1100px) {
+    .wrapper {
+        background-position: top;
+        background-size: cover;
+    }
+
+    .card {
+        max-width: 320px;
+
+        &__title {
+            font-size: 22px;
+
+            & br {
+                display: none;
+            }
+        }
+
+        &__container {
+            padding: 20px;
+        }
+
+        &__name {
+            font-size: 28px;
+        }
+
+        &__slider {
+            width: 100%;
+            margin-top: 20px;
+
+            &1 {
+                margin-top: 55px;
+            }
+        }
+        &__info {
+            margin-top: 15px;
+        }
+        &__price {
+            width: 100%;
+            padding: 10px;
+            margin: 15px auto 0 auto;
+
+            &-title {
+                margin-top: 0;
+            }
+
+            &-old {
+                margin-left: 0;
+            }
+
+            &-new {
+                margin-left: 0;
+            }
+        }
+
+        &__slider-button {
+            scale: 0.6;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .frame1 {
+        display: block;
+        max-width: 320px;
+        margin: 0 auto;
+        padding: 0 5px;
+    }
+
+    .card {
+        margin: 20px auto;
+    }
+}
